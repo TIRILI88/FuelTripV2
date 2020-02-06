@@ -84,7 +84,7 @@
                                 <rect key="frame" x="0.0" y="-44" width="414" height="930"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMl-fm-DUD">
-                                <rect key="frame" x="47" y="54" width="316" height="480"/>
+                                <rect key="frame" x="47" y="54" width="316" height="555"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Trip:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rND-rD-nya">
                                         <rect key="frame" x="87.5" y="20" width="141" height="39"/>
@@ -140,24 +140,36 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWB-KE-knk">
+                                        <rect key="frame" x="112" y="504" width="92" height="33"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="showRoute">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showRoutePressed:" destination="nGG-F7-XKa" eventType="touchUpInside" id="sdF-bR-mci"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ly2-GR-vnd" firstAttribute="centerX" secondItem="PMl-fm-DUD" secondAttribute="centerX" id="5y7-EU-1vv"/>
                                     <constraint firstItem="AQl-Vo-cIB" firstAttribute="centerX" secondItem="rND-rD-nya" secondAttribute="centerX" id="79F-fP-Mng"/>
+                                    <constraint firstItem="MWB-KE-knk" firstAttribute="top" secondItem="3vJ-f8-DN4" secondAttribute="bottom" constant="44" id="AtY-ZP-xar"/>
                                     <constraint firstItem="hJ2-eb-Ae9" firstAttribute="top" secondItem="Pdv-gA-oZ5" secondAttribute="bottom" constant="35" id="E57-Ya-Jp2"/>
                                     <constraint firstItem="Pdv-gA-oZ5" firstAttribute="centerX" secondItem="aZ8-Se-QSe" secondAttribute="centerX" id="Gb4-s5-Uip"/>
                                     <constraint firstItem="Pdv-gA-oZ5" firstAttribute="centerX" secondItem="a6k-yl-xYz" secondAttribute="centerX" id="Ir1-5o-MnA"/>
                                     <constraint firstItem="a6k-yl-xYz" firstAttribute="top" secondItem="AQl-Vo-cIB" secondAttribute="bottom" constant="28" id="OCe-ec-Zbo"/>
                                     <constraint firstItem="AQl-Vo-cIB" firstAttribute="top" secondItem="PMl-fm-DUD" secondAttribute="top" constant="79" id="ORs-NU-ypT"/>
-                                    <constraint firstAttribute="bottom" secondItem="3vJ-f8-DN4" secondAttribute="bottom" constant="20" id="P0J-HZ-lou"/>
+                                    <constraint firstAttribute="bottom" secondItem="3vJ-f8-DN4" secondAttribute="bottom" constant="95" id="P0J-HZ-lou"/>
                                     <constraint firstItem="ly2-GR-vnd" firstAttribute="leading" secondItem="PMl-fm-DUD" secondAttribute="leading" constant="55" id="QIc-Ne-nmd"/>
                                     <constraint firstItem="AQl-Vo-cIB" firstAttribute="centerX" secondItem="3vJ-f8-DN4" secondAttribute="centerX" id="VZh-Xf-Pam"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AQl-Vo-cIB" secondAttribute="trailing" id="XLP-uA-f3k"/>
+                                    <constraint firstItem="MWB-KE-knk" firstAttribute="centerX" secondItem="3vJ-f8-DN4" secondAttribute="centerX" id="bzD-Rt-fbB"/>
                                     <constraint firstItem="AQl-Vo-cIB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hJ2-eb-Ae9" secondAttribute="trailing" constant="-61" id="dSt-k0-Yeb"/>
                                     <constraint firstItem="AQl-Vo-cIB" firstAttribute="top" secondItem="rND-rD-nya" secondAttribute="bottom" constant="20" id="eov-EV-XT3"/>
                                     <constraint firstItem="3vJ-f8-DN4" firstAttribute="top" secondItem="9Fh-W4-K8Q" secondAttribute="bottom" constant="47" id="izG-O2-CMq"/>
                                     <constraint firstItem="AQl-Vo-cIB" firstAttribute="centerX" secondItem="Pdv-gA-oZ5" secondAttribute="centerX" id="jnt-cc-69O"/>
-                                    <constraint firstAttribute="bottom" secondItem="Pdv-gA-oZ5" secondAttribute="bottom" constant="204" id="kCm-eg-zAs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pdv-gA-oZ5" secondAttribute="bottom" constant="279" id="kCm-eg-zAs"/>
                                     <constraint firstItem="Pdv-gA-oZ5" firstAttribute="leading" secondItem="PMl-fm-DUD" secondAttribute="leading" constant="33" id="nau-sV-dja"/>
                                     <constraint firstItem="AQl-Vo-cIB" firstAttribute="leading" secondItem="PMl-fm-DUD" secondAttribute="leading" constant="101" id="oHz-4g-KzH"/>
                                     <constraint firstItem="Pdv-gA-oZ5" firstAttribute="centerX" secondItem="9Fh-W4-K8Q" secondAttribute="centerX" id="puX-vc-fSG"/>
@@ -179,7 +191,7 @@
                             <constraint firstAttribute="trailing" secondItem="Tbn-qE-naJ" secondAttribute="trailing" id="QgX-ly-Ljx"/>
                             <constraint firstItem="PMl-fm-DUD" firstAttribute="top" secondItem="d30-dK-ylj" secondAttribute="top" constant="54" id="XRs-en-EzI"/>
                             <constraint firstItem="PMl-fm-DUD" firstAttribute="centerX" secondItem="Tbn-qE-naJ" secondAttribute="centerX" constant="-2" id="aD3-f3-jkc"/>
-                            <constraint firstItem="d30-dK-ylj" firstAttribute="bottom" secondItem="PMl-fm-DUD" secondAttribute="bottom" constant="274" id="b4t-ZT-oal"/>
+                            <constraint firstItem="d30-dK-ylj" firstAttribute="bottom" secondItem="PMl-fm-DUD" secondAttribute="bottom" constant="199" id="b4t-ZT-oal"/>
                             <constraint firstItem="PMl-fm-DUD" firstAttribute="centerX" secondItem="QVU-Se-1AZ" secondAttribute="centerX" constant="-2" id="u20-nl-sjS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d30-dK-ylj"/>
@@ -192,12 +204,31 @@
                         <outlet property="moneyForGasLabel" destination="3vJ-f8-DN4" id="SaP-3Y-LQe"/>
                         <outlet property="numberOfStopsLabel" destination="9Fh-W4-K8Q" id="D2x-XJ-kxL"/>
                         <outlet property="originLabel" destination="ly2-GR-vnd" id="1Ii-YB-cQs"/>
+                        <outlet property="showRouteButton" destination="MWB-KE-knk" id="xMx-A2-tRh"/>
                         <outlet property="toLabel" destination="aZ8-Se-QSe" id="pHj-FY-LLr"/>
+                        <segue destination="ZSR-0E-q2e" kind="popoverPresentation" identifier="goToRoute" popoverAnchorView="PMl-fm-DUD" id="a3h-Ix-WJt">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7d-fd-3yY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="138.61607142857142"/>
+        </scene>
+        <!--Route View Controller-->
+        <scene sceneID="uVQ-Co-xrX">
+            <objects>
+                <viewController id="ZSR-0E-q2e" customClass="RouteViewController" customModule="FuelTripV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ntm-iB-eFt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NLT-7I-ZFe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LC5-gI-BVW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="139"/>
         </scene>
     </scenes>
     <resources>

@@ -16,6 +16,7 @@ protocol MapsManagerDelegate {
 struct MapsManager {
     
     var delegate: MapsManagerDelegate?
+    let k = K()
     
     static var destinationName = ""
     let rangePerFill = 320      //Average of 32 Miles per Gallon
@@ -26,10 +27,10 @@ struct MapsManager {
     //    mapsURL = https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=San+Francisco&key=
     
     let URLfirst = "https://maps.googleapis.com/maps/api/distancematrix/json?origins="
-    let apiKey = "AIzaSyBPKuxDwsPuBm1SPnfD6TmT7SKovChaxl4"
+    let apiKey = "AIzaSyDI5Gio44XBNVEg74YEyhle_sF5FEflI3k"
     
     func fetchDistance(_ origin: String) {
-        let urlString = "\(URLfirst)\(origin)&destinations=\(MapsManager.destinationName)&key=\(apiKey)"
+        let urlString = "\(URLfirst)\(origin)&destinations=\(MapsManager.destinationName)&key=\(k.apiKey)"
         performRequest(with: urlString)
     }
     
