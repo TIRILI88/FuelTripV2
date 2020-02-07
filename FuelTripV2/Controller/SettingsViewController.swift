@@ -8,14 +8,12 @@
 
 import UIKit
 
-class RouteViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
-    let routeManager = RouteManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        routeManager.fetchRoute()
         // Do any additional setup after loading the view.
     }
     
