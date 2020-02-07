@@ -12,6 +12,7 @@ import CoreLocation
 class InputViewController: UIViewController {
     
     @IBOutlet weak var destinationTextField: UITextField!
+    @IBOutlet weak var settingsButtonPressed: UIButton!
     
     let locationManager = CLLocationManager()
     var mapsManager = MapsManager()
@@ -20,8 +21,13 @@ class InputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         locationManager.requestWhenInUseAuthorization()
         destinationTextField.delegate = self
+        settingsButtonPressed.imageEdgeInsets = UIEdgeInsets(top: 30, left: 35, bottom: 30, right: 35)
+        
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
@@ -47,6 +53,12 @@ class InputViewController: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
+
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "homeToSettings", sender: self)
+    }
+    
+
 }
 
 

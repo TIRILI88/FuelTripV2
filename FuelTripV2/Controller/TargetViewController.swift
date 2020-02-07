@@ -20,8 +20,7 @@ class TargetViewController: UIViewController, MapsManagerDelegate {
     @IBOutlet weak var fromLabel: UILabel!
     @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var isCalculationLabel: UILabel!
-    @IBOutlet weak var showRouteButton: UIButton!
-    
+    @IBOutlet weak var showRouteButton: UIButton!  
     
     let locationManager = CLLocationManager()
     var mapsManager = MapsManager()
@@ -40,7 +39,7 @@ class TargetViewController: UIViewController, MapsManagerDelegate {
         moneyForGasLabel.isHidden = true
         fromLabel.isHidden = true
         toLabel.isHidden = true
-        showRouteButton.isHidden = true
+
     }
     
     func fetchData(_ mapsManager: MapsManager, model: MapsModel) {
@@ -65,7 +64,6 @@ class TargetViewController: UIViewController, MapsManagerDelegate {
                 self.moneyForGasLabel.isHidden = false
                 self.fromLabel.isHidden = false
                 self.toLabel.isHidden = false
-                self.showRouteButton.isHidden = false
                 self.numberOfStopsLabel.text = gasStopLabelText
                 self.distanceInMilesLabel.text = ("It's going to be \(String(format: "%.0f", model.distanceMiles)) miles,")
                 self.moneyForGasLabel.text = ("You will spend $\(String(format: "%.2f", model.costOfTrip))")
@@ -78,12 +76,11 @@ class TargetViewController: UIViewController, MapsManagerDelegate {
         print(error)
     }
 
-    @IBAction func showRoutePressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToRoute", sender: self)
     
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToSettings", sender: self)
     }
     
-
 
 }
 

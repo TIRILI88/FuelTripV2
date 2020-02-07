@@ -16,21 +16,23 @@ protocol MapsManagerDelegate {
 struct MapsManager {
     
     var delegate: MapsManagerDelegate?
-    let k = K()
     
     static var destinationName = ""
-    let rangePerFill = 320      //Average of 32 Miles per Gallon
-    let fuelInTank = 11         //Average consumption per Gasstop (in  Gallon)
-    let fuelPrice = 2.29        //Input of actual Gasprice on a later state
-    var pricePerFill = 25.19    // fuelPrice * fuelInTank
+    var rangePerFill: Double {
+        return Double(MapsManager.fuelInTank) * Double(MapsManager.milesPerGallon)
+    }                           //Average of 32 Miles per Gallon
     
-    //    mapsURL = https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=San+Francisco&key=
+    var pricePerFill: Double {
+        return MapsManager.fuelPrice * Double(MapsManager.fuelInTank)
+    }                           // fuelPrice * fuelInTank
     
-    let URLfirst = "https://maps.googleapis.com/maps/api/distancematrix/json?origins="
-    let apiKey = "AIzaSyDI5Gio44XBNVEg74YEyhle_sF5FEflI3k"
-    
+    static var fuelInTank : Int = 10         //Average consumption per Gasstop (in  Gallon)
+    static var fuelPrice : Double = 6.50     //Input of actual Gasprice on a later state
+    static var milesPerGallon : Int = 32     //milesPerGallon
+
+
     func fetchDistance(_ origin: String) {
-        let urlString = "\(URLfirst)\(origin)&destinations=\(MapsManager.destinationName)&key=\(k.apiKey)"
+        let urlString = "\(K.URLfirst)\(origin)&destinations=\(MapsManager.destinationName)&key=\(K.apiKey)"
         performRequest(with: urlString)
     }
     
@@ -63,7 +65,7 @@ struct MapsManager {
                 return ((Double(distance) * 0.000621371))
             }
             var numberOfGasStops: Int {
-                return Int(Double(distanceMiles) / Double(rangePerFill))
+                return Int(Double(distanceMiles) / rangePerFill)
             }
             var costOfTrip: Double {
                 return Double(numberOfGasStops) * Double(pricePerFill)

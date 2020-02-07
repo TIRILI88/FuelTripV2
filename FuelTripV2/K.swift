@@ -10,5 +10,9 @@ import Foundation
 
 
 struct K {
-    let apiKey = "AIzaSyDI5Gio44XBNVEg74YEyhle_sF5FEflI3k"
+    
+    static let mapUrl = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=New+York&destinations=Detroit&key="
+    static let URLfirst = "https://maps.googleapis.com/maps/api/distancematrix/json?origins="
+    static let apiKey = ""
+    
 }

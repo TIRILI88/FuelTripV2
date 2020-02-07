@@ -9,17 +9,17 @@
 import Foundation
 
 struct RouteManager {
-    
-    let k = K()
-    
-    let routeURL = "https://maps.googleapis.com/maps/api/directions/json?parameters"
-     
-    var origin : String = "New York"
-    var destination : String = "Detroit"
-    
-    func fetchRoute() {
-        let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&key=\(k.apiKey)"
-        print(urlString)
-    }
+//    
+//    let k = K()
+//    
+//    let routeURL = "https://maps.googleapis.com/maps/api/directions/json?parameters"
+//     
+//    var origin : String = "New York"
+//    var destination : String = "Detroit"
+//    
+//    func fetchRoute() {
+//        let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&key=\(K.apiKey)"
+//        //print(urlString)
+//    }
 
 }
